@@ -265,68 +265,6 @@ footer p {
     display: block;
 }
 
-section {
-    padding: 60px 5%;
-}
-
-
-/* =========================
-   QUIZ
-========================= */
-
-#quiz {
-    text-align: center;
-}
-
-#quiz h2 {
-    color: var(--cor-primaria);
-    margin-bottom: 15px;
-}
-
-#quiz-container {
-    margin-top: 40px;
-}
-
-.pergunta-quiz {
-    background: var(--cor-card);
-
-    padding: 25px;
-
-    margin-bottom: 25px;
-
-    border-radius: 15px;
-
-    text-align: left;
-
-    box-shadow: var(--sombra);
-}
-
-.pergunta-quiz p {
-    margin-bottom: 15px;
-}
-
-.opcoes {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.opcao-quiz {
-    cursor: pointer;
-}
-
-#quiz-resultado {
-    margin-top: 30px;
-
-    padding: 25px;
-
-    border-radius: 15px;
-
-    background: var(--cor-card);
-
-    display: none;
-}
-
 .slide img {
     width: 100%;
     height: 500px;
@@ -394,4 +332,116 @@ section {
 
 .ponto.ativo {
     background: var(--cor-primaria);
+}
+
+/* =========================
+   QUIZ
+========================= */
+
+#quiz {
+    text-align: center;
+}
+
+#quiz h2 {
+    color: var(--cor-primaria);
+    margin-bottom: 15px;
+}
+
+#quiz-container {
+    margin-top: 40px;
+}
+
+.pergunta-quiz {
+    background: var(--cor-card);
+
+    padding: 25px;
+
+    margin-bottom: 25px;
+
+    border-radius: 15px;
+
+    text-align: left;
+
+    box-shadow: var(--sombra);
+}
+
+.pergunta-quiz p {
+    margin-bottom: 15px;
+}
+
+.opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.opcao-quiz {
+    cursor: pointer;
+}
+
+#quiz-resultado {
+    margin-top: 30px;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    background: var(--cor-card);
+
+    display: none;
+}
+
+/* =====================
+   TEMAS
+===================== */
+
+body.tema-claro {
+    background: #f0faf0;
+    color: #1a1a2e;
+}
+
+body.tema-claro .card,
+body.tema-claro .pergunta-quiz {
+    background: #e8f5e9;
+}
+
+body.tema-contraste {
+    background: #000;
+    color: #fff;
+}
+
+body.tema-contraste .card,
+body.tema-contraste .pergunta-quiz {
+    background: #111;
+}
+
+body.tema-escuro {
+    background: #0B1020;
+    color: white;
+}
+
+.tema-controles button {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+
+    color: white;
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    padding: 12px 24px;
+
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.tema-controles button:hover {
+    transform: translateY(-4px);
+
+    border-color: #4ADE80;
+
+    box-shadow:
+        0 0 15px rgba(74,222,128,.5);
 }
