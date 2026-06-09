@@ -52,3 +52,39 @@ correta: 2
 ];
 
 const respostasUsuario = new Array(perguntas.length).fill(null);
+
+function renderizarQuiz() {
+
+    const container =
+        document.getElementById("quiz-container");
+
+    const htmlPerguntas = perguntas.map((item, index) => {
+
+        const opcoes = item.opcoes.map((opcao, i) => `
+            <label class="opcao-quiz">
+                <input
+                    type="radio"
+                    name="q${index}"
+                    value="${i}"
+                    onchange="registrarResposta(${index}, ${i})">
+                ${opcao}
+            </label>
+        `).join("");
+
+        return `
+            <div class="pergunta-quiz">
+                <p>
+                    <strong>${index + 1}.</strong>
+                    ${item.pergunta}
+                </p>
+
+                <div class="opcoes">
+                    ${opcoes}
+                </div>
+            </div>
+        `;
+
+    });
+
+    container.innerHTML = htmlPerguntas.join("");
+}
