@@ -89,6 +89,10 @@ function renderizarQuiz() {
     container.innerHTML = htmlPerguntas.join("");
 }
 
+function registrarResposta(questao, opcao) {
+    respostasUsuario[questao] =  opcao;
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     renderizarQuiz();
 });
