@@ -89,4 +89,4 @@ setInterval(() => {
 
     mostrarSlide(indiceAtual);
 
-}, 4000);
+},  4000);
