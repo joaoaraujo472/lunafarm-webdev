@@ -93,6 +93,18 @@ function registrarResposta(questao, opcao) {
     respostasUsuario[questao] =  opcao;
 }
 
+function calcularResultado() {
+
+    const corretas = respostasUsuario.filter(
+        (resposta, indice) =>
+            resposta === perguntas[indice].correta
+    );
+
+    const pontuacao = corretas.length;
+
+    exibirResultado(pontuacao);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     renderizarQuiz();
 });
