@@ -88,3 +88,7 @@ function renderizarQuiz() {
 
     container.innerHTML = htmlPerguntas.join("");
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    renderizarQuiz();
+});
