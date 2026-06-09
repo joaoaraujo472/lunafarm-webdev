@@ -100,15 +100,13 @@ function calcularResultado() {
             resposta === perguntas[indice].correta
     );
 
-    const pontuacao = corretas.length;
+    const pontuacao = corretas.reduce(
+        (total) => total + 1,
+        0
+    );
 
     exibirResultado(pontuacao);
 }
-
-const pontuacao = corretas.reduce(
-    (total) => total + 1,
-    0
-);
 
 function exibirResultado(pontuacao) {
 
