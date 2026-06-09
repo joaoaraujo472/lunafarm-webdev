@@ -142,5 +142,15 @@ function exibirResultado(pontuacao) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+
     renderizarQuiz();
+
+    const botao =
+        document.getElementById("btn-resultado-quiz");
+
+    botao.addEventListener(
+        "click",
+        calcularResultado
+    );
+
 });
