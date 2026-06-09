@@ -110,6 +110,37 @@ const pontuacao = corretas.reduce(
     0
 );
 
+function exibirResultado(pontuacao) {
+
+    const resultado =
+        document.getElementById("quiz-resultado");
+
+    let mensagem = "";
+
+    if (pontuacao >= 8) {
+
+        mensagem =
+            "Excelente! Você está pronto para a missão lunar.";
+
+    } else if (pontuacao >= 5) {
+
+        mensagem =
+            "Bom trabalho! Continue aprendendo sobre agricultura espacial.";
+
+    } else {
+
+        mensagem =
+            "Continue estudando. A Lua espera por você!";
+    }
+
+    resultado.style.display = "block";
+
+    resultado.innerHTML = `
+        <h3>Resultado: ${pontuacao}/10</h3>
+        <p>${mensagem}</p>
+    `;
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     renderizarQuiz();
 });
