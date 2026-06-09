@@ -395,3 +395,32 @@ section {
 .ponto.ativo {
     background: var(--cor-primaria);
 }
+
+/* =====================
+   TEMAS
+===================== */
+
+body.tema-claro {
+    background: #f0faf0;
+    color: #1a1a2e;
+}
+
+body.tema-claro .card,
+body.tema-claro .pergunta-quiz {
+    background: #e8f5e9;
+}
+
+body.tema-contraste {
+    background: #000;
+    color: #fff;
+}
+
+body.tema-contraste .card,
+body.tema-contraste .pergunta-quiz {
+    background: #111;
+}
+
+body.tema-escuro {
+    background: #0B1020;
+    color: white;
+}
