@@ -396,8 +396,12 @@ footer p {
 ===================== */
 
 body.tema-claro {
-    background: #f0faf0;
-    color: #1a1a2e;
+    --cor-fundo: #F4F7FA;
+    --cor-texto: #1E293B;
+    --cor-secundaria: #FFFFFF;
+    --cor-card: #FFFFFF;
+    --cor-primaria: #22C55E;
+    --cor-destaque: #16A34A;
 }
 
 body.tema-claro .card,
@@ -444,4 +448,27 @@ body.tema-escuro {
 
     box-shadow:
         0 0 15px rgba(74,222,128,.5);
+}
+
+body.tema-claro .navbar {
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(10px);
+}
+
+body.tema-claro .nav-links a {
+    color: #fafafa;
+}
+
+body.tema-claro .logo {
+    color: #16A34A;
+}
+
+body.tema-claro .card,
+body.tema-claro .pergunta-quiz,
+body.tema-claro #quiz-resultado {
+    box-shadow: 0 8px 20px rgba(8, 8, 8, 0.08);
+}
+
+body.tema-claro p {
+    color: #475569;
 }
