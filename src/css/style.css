@@ -238,35 +238,37 @@ footer p {
 }
 
 /* =========================
-   RESPONSIVIDADE
+   SLIDESHOW
 ========================= */
 
-@media (max-width: 768px) {
-
-    .navbar {
-        flex-direction: column;
-        height: auto;
-        padding: 20px;
-    }
-
-    .nav-links {
-        margin-top: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .hero h1 {
-        font-size: 2.3rem;
-    }
-
-    .cards {
-        grid-template-columns: 1fr;
-    }
-
-    section {
-        padding: 60px 5%;
-    }
+#slideshow-section {
+    background: #111827;
+    text-align: center;
 }
+
+#slideshow-section h2 {
+    color: var(--cor-primaria);
+    margin-bottom: 40px;
+}
+
+.slideshow {
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+}
+
+.slide {
+    display: none;
+}
+
+.slide.ativo {
+    display: block;
+}
+
+section {
+    padding: 60px 5%;
+}
+
 
 /* =========================
    QUIZ
@@ -323,4 +325,73 @@ footer p {
     background: var(--cor-card);
 
     display: none;
+}
+
+.slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.slide-legenda {
+    margin-top: 15px;
+    font-size: 1rem;
+}
+
+.slide-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    border: none;
+    cursor: pointer;
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    font-size: 1.5rem;
+
+    background: rgba(255,255,255,0.2);
+    color: white;
+
+    transition: .3s;
+}
+
+.slide-btn:hover {
+    background: var(--cor-primaria);
+    color: black;
+}
+
+#btn-anterior {
+    left: 15px;
+}
+
+#btn-proximo {
+    right: 15px;
+}
+
+.slide-indicadores {
+    margin-top: 20px;
+}
+
+.ponto {
+    width: 14px;
+    height: 14px;
+
+    border-radius: 50%;
+
+    background: #666;
+
+    display: inline-block;
+
+    margin: 0 5px;
+
+    cursor: pointer;
+}
+
+.ponto.ativo {
+    background: var(--cor-primaria);
 }
