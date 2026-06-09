@@ -105,6 +105,11 @@ function calcularResultado() {
     exibirResultado(pontuacao);
 }
 
+const pontuacao = corretas.reduce(
+    (total) => total + 1,
+    0
+);
+
 document.addEventListener("DOMContentLoaded", () => {
     renderizarQuiz();
 });
